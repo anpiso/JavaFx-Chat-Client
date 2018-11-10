@@ -66,10 +66,7 @@ public class Main extends Application {
 				if(length == -1) 							//메세지를 읽어들일 때 오류가 발생했다면
 					throw new IOException();				//IOExeption오류를 발생시킴
 				
-				String msg = new String(buffer, 0, length, "UTF-8");
-				
-				
-				
+				String msg = new String(buffer, 0, length, "UTF-8");				
 				
 			}catch(Exception e) {
 				stopClient();
