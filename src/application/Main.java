@@ -60,7 +60,7 @@ public class Main extends Application {
 	public void receive() {
 		while(true) {
 			try {
-				InputStream in = socket.getInputStream();//소켓에서 데이터를 inputStream으로 리턴을 받아서 inputStream형 in객체를 생성
+				InputStream in = socket.getInputStream();	//소켓에서 데이터를 inputStream으로 리턴을 받아서 inputStream형 in객체를 생성
 				byte[] buffer = new byte[512];				//byte형 배열인 buffer를 최대 512바이트까지 받을 수 있도록 객체 생성.
 				int length = in.read(buffer);				//inputStream으로부터 읽어들인 바이트(데이터)를 buffer에 저장하고 실제 읽어들인 바이트 수를 리턴하여 length에 저장
 				if(length == -1) 							//메세지를 읽어들일 때 오류가 발생했다면
@@ -75,6 +75,8 @@ public class Main extends Application {
 		}
 		
 	}
+	
+	
 
 	//서버로 메세지 전송
 	public void send(String msg) {
